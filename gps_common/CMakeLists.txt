@@ -29,7 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 #link_directories(${LIBRARY_DIRS})
 
-#set(LIBS ${rosidl_default_generators_LIBRARIES} ${ament_cmake_LIBRARIES}
+set(LIBS ${rosidl_default_generators_LIBRARIES} ${ament_cmake_LIBRARIES})
 #  ${${DEPS}_LIBRARIES})
 
 ############
@@ -74,9 +74,9 @@ set(DEPS std_msgs)#nav_msgs sensor_msgs std_msgs)
 #catkin_install_python(PROGRAMS nodes/fix_translator
 #  DESTINATION lib/${PROJECT_NAME})
 
-#ament_export_dependencies(rosidl_default_generators)
+ament_export_dependencies(rosidl_default_generators)
 ament_export_dependencies(ament_cmake)
-#ament_export_dependencies(${DEPS})
+ament_export_dependencies(std_msgs)
 ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()
