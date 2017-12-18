@@ -1,22 +1,21 @@
 cmake_minimum_required(VERSION 3.5)
-project(gps_common)
+project(gps_common_msgs)
 
-# Add support for C++11
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 11)
 endif()
 
-#find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
-#find_package(${DEPS} REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
-
-set(LIBS ${rosidl_default_generators_LIBRARIES} ${ament_cmake_LIBRARIES})
-
-set(DEPS std_msgs)#nav_msgs sensor_msgs std_msgs)
+rosidl_generate_interfaces(${PROJECT_NAME} 
+  "msg/GPSStatus.msg" 
+  "msg/GPSFix.msg"
+  DEPENDENCIES builtin_interfaces
+  std_msgs
+)
 
 ament_export_dependencies(rosidl_default_generators)
 ament_export_dependencies(ament_cmake)
