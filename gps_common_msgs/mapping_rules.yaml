@@ -1,0 +1,10 @@
+-
+  ros1_package_name: 'gps_common'
+  ros1_message_name: 'GPSFix'
+  ros2_package_name: 'gps_common_msgs'
+  ros2_message_name: 'GPSFix'
+-
+  ros1_package_name: 'gps_common'
+  ros1_message_name: 'GPSStatus'
+  ros2_package_name: 'gps_common_msgs'
+  ros2_message_name: 'GPSStatus'

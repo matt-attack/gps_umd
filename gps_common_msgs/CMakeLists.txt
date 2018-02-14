@@ -17,6 +17,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   std_msgs
 )
 
+install(FILES mapping_rules.yaml 
+  DESTINATION share/${PROJECT_NAME})
+
+
 ament_export_dependencies(rosidl_default_generators)
 ament_export_dependencies(ament_cmake)
 ament_export_dependencies(std_msgs)
